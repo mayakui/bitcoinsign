@@ -1,0 +1,11 @@
+<tableRule name="sharding-by-prefixpattern">
+    <rule>
+        <columns>user_id</columns>
+        <algorithm>sharding-by-prefixpattern</algorithm>
+    </rule>
+</tableRule>
+<function name="sharding-by-pattern" class="org.opencloudb.route.function.PartitionByPrefixPattern">
+<property name="patternValue">256</property>
+<property name="prefixLength">5</property>
+<property name="mapFile">partition-pattern.txt</property>
+</function>
